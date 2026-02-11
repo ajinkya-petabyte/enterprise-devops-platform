@@ -6,7 +6,11 @@ resource "aws_instance" "this" {
   associate_public_ip_address = true
   key_name                    = var.key_name
 
+  user_data = var.user_data
+
   tags = {
     Name = var.name
   }
 }
+
+
